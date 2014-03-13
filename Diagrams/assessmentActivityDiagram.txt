@@ -1,0 +1,4 @@
+Leaf Assessment Activity diagram
+
+The system will allow lecturers to create, modify and remove aggregate and leaf assessments. 
+Leaf assessments are assessments to which an atomic mark is assigned. 
