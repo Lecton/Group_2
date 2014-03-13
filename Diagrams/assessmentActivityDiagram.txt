@@ -1,4 +1,6 @@
 Leaf Assessment Activity diagram
 
 The system will allow lecturers to create, modify and remove aggregate and leaf assessments. 
-Leaf assessments are assessments to which an atomic mark is assigned. 
+Leaf assessments are assessments to which an atomic mark is assigned. An
+assessment is by default not published implying that students cannot, by default, query their marks
+for an assessment.
