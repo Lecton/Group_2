@@ -1,0 +1,123 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Group 5}
+\title{Mini project SRS}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\huge Software Requirements Specification\\[0.15cm]
+\huge Mark Management System\\[0.15cm]
+\large \texttt{Version: 1.0}\\[1cm]
+
+Organization:\\
+\texttt{University of Pretoria: Group 5}\\[0.5cm]
+GitHub:\\[0.01cm]
+\begin{verbatim}
+          https://github.com/Lecton/Group_2.git
+\end{verbatim}
+
+Authors:\\
+\texttt{Mr Lecton Ramasila (10637291)\\
+        Mr Joas Mogale(10354167)\\
+        Mr Juandre Barnard  (11061015)\\
+        Miss Talifhani Sikhitha (10346504)\\
+        Mr Kabelo Mamadi (10301004)\\
+        Mr Collen Mphabantshi (10404687)\\
+        Mr Renato de Jesus (28113561)}\\[1cm]
+        
+\today
+\end{center}
+\end{titlepage}
+
+
+\tableofcontents
+\pagebreak
+\section{Software architecture design}
+
+\subsection{Programing language}
+\textbf{Python}
+\newline{The system will be written in python and this language will handle the connections to the server, create the sockets and send and receive requests and response events to the various interfaces thought the different platforms.
+The program will be written on the Django framework which implies that it will be high performing and elegant and since it is a Web application, it is not restricted by any hardware architecture or software incompatibilities that may prevent other applications from running successfully. } 
+
+\textbf {\textbf\newline{Java}}
+\newline{The Java language is used to build the android interface using the trivial android API’s as well as several libraries that perform tasks such as animation and smoothness for the application that is to run on any interface that runs the appropriate android operating system or simulation software that can render the application.}
+
+
+\subsection{Database}
+The database of choice is MySQL. This database is very convenient as it is broadly used; hence it is quite convenient and easily pluggable to a lot of applications. The system will use MySQL to do the following. 
+\begin{itemize}
+\item The CS MySQL database will be provides exhaustive information to access course and module information.
+\item Django's object-relational mapper provides the core of the framework, currently supports MySQL. Django generates production-ready CRUD interfaces from the ORM. The automatic creation of database tables and database abstraction layer from Pythonic model definition is really quite elegant and probably Django's most distinctive feature.
+\item MySQL Audit logging triggers will handle all the audit in the system. 
+\end{itemize}
+
+
+\subsection{Application server }
+\indent \textbf{Django application server}
+\newline{The Django web server will host and handle the interactions from various interfaces with the python program, thus the service will handle all the requests and response events.}
+
+
+\textbf {\textbf\newline{Apache Web server}}
+\newline{The current services that are on the computer science web site (www.cs.up.ac.za) run on a Apache Web Server, thus this server will be used as an interface between the computer sciences offered services such as lecturer and tutors names and the python written application that servers as a mark serving utility.
+The apache HTTP server will manipulate authentication and authorization using three of its process:
+}
+\begin{itemize}
+\item Authentication type
+\item Authentication provider
+\item Authorization
+\end{itemize}
+These modules implement core directives that are core to all authentic modules.
+
+\subsection{Framework}
+\textbf{Django application server}
+\newline{The Django framework uses the model view controller pattern (MVC) and it emphasis the component of reusability, preventing one from repeating themselves.}
+
+\subsection{Application server }
+\begin{itemize}
+\item  Factory 
+The system different interfaces, factory object helps provide necessary information about the type of object the client needs.
+\item Model View Controller 
+The purpose of systems is to retrieve data from a data store in the database(LDAP) and display it for the user(marker or lecturer) on provided interfaces. After the user changes the data, the system stores the updates in the data store. Because the key flow of information is between the data store and the user interface, you might be inclined to tie these two pieces together to reduce the amount of coding and to improve application performance
+\end{itemize}
+
+\subsection{Protocols}
+\textbf{SOAP}
+\newline{The standard protocol HTTP makes it easier for SOAP model to tunnel across firewalls, proxies without any modifications to the SOAP protocol and connection between different channels of the system. SOAP requires less plumbing code for services design, (i.e., transactions, security, coordination, addressing, trust, etc.) hence the system it won't just support complex operations, which require conversational state and contextual information to be maintained. With the SOAP approach, developers need not worry about writing this plumbing code into the application layer themselves}
+\newline{The system needs consistency and integrity in processing information, SOAP has a large number of supporting standards for security, reliability, transactions. This will be applicable with LDAP system used by the department of Computer Science.}
+
+\textbf {\textbf\newline{HTTPS}}
+\newline{It provides authentication that uses an encrypted transport protocol underneath to handle all communication of sensitive data}
+\subsection{Libraries}
+\begin{itemize}
+\item {	MuPDF is also small, fast, and yet complete. It supports PDF 1.7 with transparency, encryption, hyperlinks, annotations, searching and more. It also reads XPS and OpenXPS documents. MuPDF is written modularly, so features can be added on by integrators if they so desire.}
+\item {CSV File Reading and Writing(version 2.3) format and python  imports and exports format for spread-sheets and databases of the students mark-sheet.}
+\item {	Jquery makes  HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.}
+\end{itemize}
+
+\section{Application design}
+
+\subsection{Specifcations of lower levels of granularity}
+\subsection{API specifcations}
+
+\includegraphics[scale=0.4]{"Api Diagrams".jpg}
+
+\subsection{sequence and/or activity diagrams for detailed system process specifcations}
+
+\newpage
+\textbf\textbf\textbf\textbf{App Interface}\\
+\includegraphics[scale=0.4]{"AppInterface".png}\\\\
+
+\textbf\textbf\textbf\textbf{Web Interface}\\
+\includegraphics[scale=0.4]{"webInterface".png}\\
+
+\subsection{UI screen designs}
+\includegraphics[scale=0.3]{"Mobile_UI//lecture/1_Login".png}
+
+\end{document}
