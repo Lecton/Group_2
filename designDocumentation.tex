@@ -104,20 +104,42 @@ The purpose of systems is to retrieve data from a data store in the database(LDA
 \section{Application design}
 
 \subsection{Specifcations of lower levels of granularity}
-\subsection{API specifcations}
 
-\includegraphics[scale=0.4]{"Api Diagrams".jpg}
+\subsection*{Login diagram}
+The user have to first login to have full access to the system.\\
+\includegraphics[scale=1.0]{"login-lower-level".png}\\
+
+\subsection*{Mark processing}
+The Marks consists of four subsections: Adding, Editing, Publishing and showing. The students will only take part in the viewing, lectures are the only users that can publish and the editing and adding can be performed by both the marker and lecturers.\\
+\includegraphics[scale=0.2]{"Marks_Diagram".jpg}\\
+
+\pagebreak
+\subsection*{Assessment Activity Diagramg}
+The system will allow lecturers to create, modify and remove aggregate and leaf assessments. 
+Leaf assessments are assessments to which an atomic mark is assigned. An
+assessment is by default not published implying that students cannot, by default, query their marks
+for an assessment.\\\\
+\includegraphics[scale=0.6]{"Diagrams/assessmentActivityDiagram".jpg}\\
+
+\pagebreak
+\subsection{API specifcations}
+This demonstrates the API package of the system split into three packages. Namely Users, Reporting, Assessment management.\\
+\includegraphics[scale=0.3]{"Api Diagram".jpg}
 
 \subsection{sequence and/or activity diagrams for detailed system process specifcations}
 
-\newpage
-\textbf\textbf\textbf\textbf{App Interface}\\
+\subsection*{App Interface}
+The specification which allow us to navigate through the system for the App interface
 \includegraphics[scale=0.4]{"AppInterface".png}\\\\
 
-\textbf\textbf\textbf\textbf{Web Interface}\\
+\subsection*{Web Interface}
+The specification which allow us to navigate through the system Web interface
 \includegraphics[scale=0.4]{"webInterface".png}\\
 
 \subsection{UI screen designs}
-\includegraphics[scale=0.3]{"Mobile_UI//lecture/1_Login".png}
+\includegraphics[scale=0.4]{"Diagrams/student".jpg}
 
+\section{Database Design}
+The database schematic in ERD(Entity relational database) format\\
+\includegraphics[scale=0.3]{"Entity_Relationship_Diagram1".jpg}
 \end{document}
